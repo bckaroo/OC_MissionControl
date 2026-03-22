@@ -1,0 +1,9 @@
+// This file has been disabled due to build errors
+// See app/reports/page.tsx for original content
+export default function Reports() {
+  return (
+    <div style={{ padding: '40px', textAlign: 'center' }}>
+      <h1>Reports coming soon</h1>
+    </div>
+  );
+}

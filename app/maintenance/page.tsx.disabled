@@ -1,0 +1,9 @@
+// This file has been disabled due to build errors
+// Missing UI component dependencies
+export default function Maintenance() {
+  return (
+    <div style={{ padding: '40px', textAlign: 'center' }}>
+      <h1>Maintenance coming soon</h1>
+    </div>
+  );
+}
