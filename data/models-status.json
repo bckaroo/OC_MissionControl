@@ -1,0 +1,62 @@
+{
+  "lastUpdated": 1774095600000,
+  "status": {
+    "ollama/qwen2.5:7b": {
+      "modelId": "ollama/qwen2.5:7b",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 11200,
+      "requestsSucceeded": 456,
+      "requestsFailed": 2
+    },
+    "ollama/deepseek-coder:6.7b": {
+      "modelId": "ollama/deepseek-coder:6.7b",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 12450,
+      "requestsSucceeded": 234,
+      "requestsFailed": 1
+    },
+    "ollama/glm-4.7-flash": {
+      "modelId": "ollama/glm-4.7-flash",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 37600,
+      "requestsSucceeded": 567,
+      "requestsFailed": 3
+    },
+    "ollama/qwen3.5:latest": {
+      "modelId": "ollama/qwen3.5:latest",
+      "status": "broken",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 999999,
+      "errorMessage": "Request timeout > 180s",
+      "requestsSucceeded": 0,
+      "requestsFailed": 5
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "modelId": "anthropic/claude-sonnet-4-6",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 4800,
+      "requestsSucceeded": 234,
+      "requestsFailed": 0
+    },
+    "anthropic/claude-haiku-4-5": {
+      "modelId": "anthropic/claude-haiku-4-5",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 3200,
+      "requestsSucceeded": 156,
+      "requestsFailed": 0
+    },
+    "anthropic/claude-opus-4-6": {
+      "modelId": "anthropic/claude-opus-4-6",
+      "status": "healthy",
+      "lastHealthCheck": 1774095600000,
+      "responseTimeMs": 5600,
+      "requestsSucceeded": 89,
+      "requestsFailed": 0
+    }
+  }
+}

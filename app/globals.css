@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Backgrounds (Linear-exact neutrals) ── */
+  --bg-primary:   #0f0f0f;   /* main app background */
+  --bg-secondary: #141414;   /* panels, split panes */
+  --bg-tertiary:  #1a1a1a;   /* cards, surfaces */
+  --bg-card:      #1e1e1e;   /* slightly raised cards */
+  --bg-hover:     #222222;   /* hover state */
+  --bg-sidebar:   #0a0a0a;   /* sidebar — slightly darker */
+
+  /* ── Borders ── */
+  --border:        rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-active: rgba(255, 255, 255, 0.12);
+
+  /* ── Text ── */
+  --text-primary:   #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted:     #666666;
+
+  /* ── Accents ── */
+  --accent-purple: #8b5cf6;
+  --accent-violet: #7c3aed;
+  --accent-blue:   #3b82f6;
+  --accent-indigo: #2563eb;
+  --accent-cyan:   #06b6d4;
+  --accent-green:  #22c55e;
+  --accent-yellow: #f59e0b;
+  --accent-amber:  #d97706;
+  --accent-red:    #ef4444;
+  --accent-pink:   #ec4899;
+  --accent-orange: #f97316;
+
+  /* ── Status dot palette ── */
+  --dot-red:    #ef4444;
+  --dot-orange: #f59e0b;
+  --dot-blue:   #3b82f6;
+  --dot-purple: #8b5cf6;
+  --dot-green:  #22c55e;
+  --dot-gray:   #6b7280;
+
+  /* ── Execution Status Colors ── */
+  --status-running:   #3b82f6;
+  --status-completed: #22c55e;
+  --status-failed:    #ef4444;
+  --status-pending:   #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ── Enhanced Font Scaling (Improved Readability) ── */
+h1 { font-size: 40px; font-weight: 700; line-height: 1.2; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+h2 { font-size: 35px; font-weight: 700; line-height: 1.25; margin: 0 0 16px 0; letter-spacing: -0.005em; }
+h3 { font-size: 30px; font-weight: 600; line-height: 1.3; margin: 0 0 14px 0; }
+h4 { font-size: 24px; font-weight: 600; line-height: 1.4; margin: 0 0 10px 0; }
+h5 { font-size: 20px; font-weight: 600; line-height: 1.4; margin: 0 0 8px 0; }
+h6 { font-size: 18px; font-weight: 600; text-transform: uppercase; line-height: 1.4; margin: 0 0 8px 0; letter-spacing: 0.05em; }
+
+p { font-size: 18px; line-height: 1.7; margin: 0 0 14px 0; }
+
+/* ── UI Elements (Base 18px for better readability) ── */
+button { font-size: 18px; padding: 10px 18px; letter-spacing: 0.3px; }
+input, select, textarea { font-size: 18px; padding: 10px 14px; letter-spacing: 0.2px; }
+a { font-size: 18px; }
+
+/* ── Utility Classes (Improved Scale) ── */
+.text-xs { font-size: 15px; }
+.text-sm { font-size: 16px; line-height: 1.5; }
+.text-base { font-size: 18px; line-height: 1.6; }
+.text-lg { font-size: 20px; line-height: 1.6; }
+.text-xl { font-size: 24px; line-height: 1.5; }
+.text-2xl { font-size: 28px; line-height: 1.4; }
+.text-3xl { font-size: 32px; line-height: 1.3; }
+.text-4xl { font-size: 40px; line-height: 1.2; }
+
+/* ── Small Labels & Status (For density in cards) ── */
+.label-xs { font-size: 14px; font-weight: 600; letter-spacing: 0.05em; color: var(--text-muted); }
+.label-sm { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-muted); }
+.label-md { font-size: 16px; font-weight: 600; letter-spacing: 0.01em; color: var(--text-secondary); }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+.pixel-font {
+  font-family: "Courier New", Courier, monospace;
+  image-rendering: pixelated;
+}
+
+@keyframes pulse-green {
+  0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%  { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse-status {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Smooth transitions ── */
+*:not(.flip-card-inner) {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+/* ── Component-Specific Font Sizes (For Dashboard Readability) ── */
+
+/* Card titles and headers */
+[style*="fontSize: \"13px\""][style*="fontWeight: \"600\""],
+[style*="fontSize: \"13px\""][style*="fontWeight: \"700\""] {
+  font-size: 18px !important;
+}
+
+/* Labels and metadata */
+[style*="fontSize: \"10px\""] {
+  font-size: 15px !important;
+}
+
+/* Small secondary text */
+[style*="fontSize: \"11px\""] {
+  font-size: 16px !important;
+}
+
+/* Main body text */
+[style*="fontSize: \"12px\""] {
+  font-size: 17px !important;
+}
+
+/* Large headings */
+[style*="fontSize: \"14px\""][style*="fontWeight: \"600\""],
+[style*="fontSize: \"14px\""][style*="fontWeight: \"700\""] {
+  font-size: 20px !important;
+}
+
+/* Extra small badges */
+[style*="fontSize: \"9px\""] {
+  font-size: 14px !important;
+}
+
+/* ── Flip card ── */
+.flip-card {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

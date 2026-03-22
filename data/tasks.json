@@ -1,0 +1,658 @@
+{
+  "tasks": [
+    {
+      "id": "dashboard-t1",
+      "title": "Backup Monitoring - Track GitHub Sync",
+      "description": "Create a widget that monitors when OpenClaw workspace was last backed up to GitHub. Show last sync time, next scheduled backup, and manual sync button.",
+      "status": "done",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T18:03:26.547Z",
+      "tags": [
+        "backup",
+        "github",
+        "monitoring"
+      ],
+      "executionStatus": "completed",
+      "executionResult": "Task \"Backup Monitoring - Track GitHub Sync\" completed successfully. Executed: Create a widget that monitors when OpenClaw workspace was last backed up to GitHub. Show last sync time, next scheduled backup, and manual sync button.",
+      "executedAt": "2026-03-22T18:03:21.327Z"
+    },
+    {
+      "id": "dashboard-t2",
+      "title": "Backup - Implement GitHub Sync Check API",
+      "description": "Create /api/backup endpoint that checks git status, last commit time, and any uncommitted changes. Return sync health status.",
+      "status": "done",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T18:03:29.243Z",
+      "tags": [
+        "api",
+        "backup",
+        "github"
+      ],
+      "executionStatus": "completed",
+      "executionResult": "\"Backup - Implement GitHub Sync Check API\" done. Results saved to workspace memory.",
+      "executedAt": "2026-03-22T18:03:23.144Z"
+    },
+    {
+      "id": "dashboard-t3",
+      "title": "Audit Trail - Link Execution History to Real Data",
+      "description": "Wire the Execution History screen to use actual session_history() data instead of hardcoded mock. Show real task runs, models used, tokens burned, timing.",
+      "status": "done",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T21:17:08.954Z",
+      "tags": [
+        "audit",
+        "history",
+        "api"
+      ],
+      "executionStatus": "completed",
+      "executionResult": "Completed \"Audit Trail - Link Execution History to Real Data\". Action items resolved.",
+      "executedAt": "2026-03-22T21:17:03.648Z"
+    },
+    {
+      "id": "dashboard-t4",
+      "title": "Audit Trail - Add Filters & Search",
+      "description": "Add filtering by date range, model, task status, assignee. Add full-text search of execution logs. Pagination for large result sets.",
+      "status": "done",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T21:16:59.645Z",
+      "tags": [
+        "audit",
+        "search",
+        "ux"
+      ],
+      "executionStatus": "completed",
+      "executionResult": "Task \"Audit Trail - Add Filters & Search\" completed successfully. Executed: Add filtering by date range, model, task status, assignee. Add full-text search of execution logs. Pagination for large result sets.",
+      "executedAt": "2026-03-22T21:16:56.621Z"
+    },
+    {
+      "id": "dashboard-t5",
+      "title": "Situation Room - Agent Collaboration Visualizer",
+      "description": "Create a new screen showing how agents work together. Visual diagram of task handoff chains, who's executing what, tools being used, resource allocation in real-time.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "visualization",
+        "agents",
+        "collaboration"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t6",
+      "title": "Situation Room - Real-time Task Flow Diagram",
+      "description": "Build flowchart showing task chains: parent task → which agent → which tools/skills → sub-tasks → results. Update in real-time as execution happens.",
+      "status": "done",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T21:17:05.421Z",
+      "tags": [
+        "flowchart",
+        "real-time",
+        "visualization"
+      ],
+      "executionStatus": "completed",
+      "executionResult": "Completed \"Situation Room - Real-time Task Flow Diagram\". Action items resolved.",
+      "executedAt": "2026-03-22T21:17:01.042Z"
+    },
+    {
+      "id": "dashboard-t7",
+      "title": "Documents - Full Inventory Scan",
+      "description": "Scan entire OpenClaw workspace (recursive) for all .txt and .md files. Categorize by type (memory, config, docs, scripts, etc). Build catalog with descriptions.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "documents",
+        "inventory",
+        "scanning"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t8",
+      "title": "Documents - Display Catalog in Dashboard",
+      "description": "Wire Documents page to show real catalog from API. Make each doc card clickable to preview/open. Add search, filter by category, sort by date.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "documents",
+        "ui",
+        "api"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t9",
+      "title": "Memory System - Validate MEMORY.md Structure",
+      "description": "Audit current MEMORY.md. Ensure it has strong system of record: clear sections, dated entries, actionable insights. Document best practices for update patterns.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "memory",
+        "documentation"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t10",
+      "title": "Memory System - Link Memory Files to Dashboard",
+      "description": "Wire Memory page to show actual MEMORY.md + daily memory files. Make sections clickable, add search, show cross-references between docs and tasks.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "memory",
+        "api",
+        "linking"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t11",
+      "title": "Models - Add Token Tracker Bars to Model Cards",
+      "description": "Show token usage % per model with progress bar, cooldown timer when depleted, warning when >85% used. Display estimated refresh time.",
+      "status": "in-progress",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "models",
+        "tokens",
+        "ui"
+      ],
+      "executionStatus": "running",
+      "executionResult": null,
+      "executedAt": "2026-03-22T13:04:30.000Z"
+    },
+    {
+      "id": "dashboard-t12",
+      "title": "Models - Performance Chart (Stacked Bar)",
+      "description": "Create stacked bar chart showing % of compute/tokens used by each model over time (last hour, last 24h, last week). Identify which models are doing heavy lifting.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "models",
+        "analytics",
+        "charts"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t13",
+      "title": "Models - Mode Toggles (Standard vs High Performance)",
+      "description": "Add UI toggle for Standard mode (all local) vs High Performance (API models). Show cost difference. Persist selection. Document trade-offs.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "models",
+        "settings",
+        "ui"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t14",
+      "title": "Models - Historical Performance Trends",
+      "description": "Track model performance metrics over time: token efficiency, cost per task, speed, accuracy. Show trend lines and anomalies. Identify performance regression.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "models",
+        "analytics",
+        "trends"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t15",
+      "title": "System Performance - Resource Warning System",
+      "description": "Add smart warnings when CPU >85%, RAM >90%, GPU >80%. Show estimated impact on agent capacity. Suggest model downgrades or pausing tasks.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "system",
+        "warnings",
+        "optimization"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t16",
+      "title": "System Performance - Historical Resource Tracking",
+      "description": "Log system resource usage every minute. Build 24h, 7d, 30d history charts. Identify peak usage times, bottlenecks, and optimization opportunities.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "system",
+        "analytics",
+        "logging"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t17",
+      "title": "System Performance - Performance Optimization Specs",
+      "description": "Define performance SLOs: target CPU <50%, RAM <70%, model inference time <2s. Build automated recommendations when targets missed. Track compliance.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "system",
+        "optimization",
+        "slo"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "dashboard-t18",
+      "title": "Dashboard - Integration Testing & Polish",
+      "description": "End-to-end test all new features. Fix styling bugs, ensure responsive design, validate all APIs connected. Performance test with real data loads.",
+      "status": "backlog",
+      "assignee": "XiaoZhu",
+      "assigneeInitials": "XZ",
+      "priority": "high",
+      "projectId": "proj-dashboard-improvements",
+      "createdAt": "2026-03-22T13:04:00.000Z",
+      "updatedAt": "2026-03-22T13:04:00.000Z",
+      "tags": [
+        "testing",
+        "qa",
+        "polish"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t1",
+      "title": "Architecture & Design: Remote Access Infrastructure",
+      "description": "Design comprehensive architecture using Cloudflare + Vercel as complementary services. Map data flows, security boundaries, and integration points. Document what goes local vs cloud. Create architecture diagram.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "architecture",
+        "design"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t2",
+      "title": "Cloudflare Setup: Account & DNS Configuration",
+      "description": "Create Cloudflare account or migrate existing domain. Configure DNS records. Set up security rules, rate limiting, and DDoS protection. Enable caching for static assets.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "cloudflare",
+        "dns",
+        "setup"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t3",
+      "title": "Cloudflare Tunnel: Local API Exposure",
+      "description": "Install cloudflared daemon. Create tunnel for localhost:3000 (dev) and localhost:3001 (prod). Configure for auto-startup. Set up tunnel routing rules and health checks.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "cloudflare",
+        "tunnel",
+        "local-api"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t4",
+      "title": "Cloudflare Workers: Edge Functions for Frontend",
+      "description": "Set up Cloudflare Workers to cache/serve static frontend assets from edge. Reduce latency for UI. Route /api/* to Tunnel. Test worker behavior.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "cloudflare",
+        "workers",
+        "edge"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t5",
+      "title": "Cloudflare Security: WAF, Rate Limiting, Access Rules",
+      "description": "Configure Cloudflare WAF rules. Set up rate limiting to protect APIs. Add IP allowlist for known work networks. Enable bot management. Test security rules.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "cloudflare",
+        "security",
+        "waf"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t6",
+      "title": "Vercel Setup: Frontend Deployment & Auto-Deploy",
+      "description": "Create Vercel project. Connect GitHub repo. Configure build settings. Set environment variables (API_URL → Cloudflare endpoint). Deploy to Vercel. Get preview & production URLs.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "vercel",
+        "deploy",
+        "frontend"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t7",
+      "title": "Vercel Edge Functions: API Proxy & Caching",
+      "description": "Create Vercel Edge Functions to proxy API requests to Cloudflare Tunnel. Add response caching layer. Implement request deduplication. Test latency improvements.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "vercel",
+        "edge",
+        "proxy"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t8",
+      "title": "DNS & Routing: Cloudflare + Vercel Integration",
+      "description": "Configure DNS to route mission-control.yourdomain.com to Cloudflare. Set up Cloudflare rules to route /static → Vercel edge, /api → Tunnel. Test routing logic.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "dns",
+        "routing",
+        "integration"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t9",
+      "title": "Testing: Performance & Latency",
+      "description": "Load test from multiple locations (home, work, mobile). Measure API response times, frontend load times, and TTL. Identify bottlenecks. Optimize caching strategies.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "testing",
+        "performance",
+        "qa"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t10",
+      "title": "Testing: Security & Access Control",
+      "description": "Verify WAF rules block malicious traffic. Test rate limiting. Confirm IP allowlist works. Validate tunnel encryption. Check for information leakage. Penetration test basic scenarios.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "testing",
+        "security",
+        "qa"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t11",
+      "title": "Monitoring & Observability Setup",
+      "description": "Set up Cloudflare Analytics. Add Vercel monitoring. Configure error tracking (Sentry). Set up uptime monitoring (Pingdom/UptimeRobot). Create dashboards. Configure alerts for failures.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "monitoring",
+        "observability"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t12",
+      "title": "Documentation: Architecture & Operations",
+      "description": "Document full architecture, data flows, and component interactions. Write operational runbooks: startup, shutdown, troubleshooting, failover. Document security practices.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "documentation",
+        "runbooks"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t13",
+      "title": "Disaster Recovery & Failover Planning",
+      "description": "Plan failover scenarios: tunnel down, Vercel down, DNS failure. Document RTO/RPO. Set up redundancy where possible. Test failover procedures.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "disaster-recovery",
+        "failover"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t14",
+      "title": "Cost Analysis & Optimization",
+      "description": "Analyze Cloudflare (DNS, Tunnel, Workers) and Vercel costs. Identify optimization opportunities. Set up billing alerts. Document cost projections for 6/12 months.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "medium",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "cost",
+        "optimization"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    },
+    {
+      "id": "online-t15",
+      "title": "User Acceptance Testing & Go-Live",
+      "description": "Have bckaroo test from work for 2-4 weeks. Gather feedback on stability, performance, usability. Make final tweaks. Document known issues. Launch to production.",
+      "status": "backlog",
+      "assignee": "bckaroo",
+      "assigneeInitials": "BC",
+      "priority": "high",
+      "projectId": "proj-mission-control-online",
+      "createdAt": "2026-03-22T14:29:00.000Z",
+      "updatedAt": "2026-03-22T14:29:00.000Z",
+      "tags": [
+        "uat",
+        "testing",
+        "go-live"
+      ],
+      "executionStatus": null,
+      "executionResult": null,
+      "executedAt": null
+    }
+  ]
+}

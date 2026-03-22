@@ -1,0 +1,72 @@
+{
+  "lastUpdated": 1774095600000,
+  "usage": {
+    "ollama/qwen2.5:7b": {
+      "modelId": "ollama/qwen2.5:7b",
+      "totalTokensUsed": 45230,
+      "inputTokens": 28500,
+      "outputTokens": 16730,
+      "estimatedCost": 0,
+      "lastUpdated": 1774095600000,
+      "timesUsed": 142
+    },
+    "ollama/deepseek-coder:6.7b": {
+      "modelId": "ollama/deepseek-coder:6.7b",
+      "totalTokensUsed": 78950,
+      "inputTokens": 45200,
+      "outputTokens": 33750,
+      "estimatedCost": 0,
+      "lastUpdated": 1774095600000,
+      "timesUsed": 87
+    },
+    "ollama/glm-4.7-flash": {
+      "modelId": "ollama/glm-4.7-flash",
+      "totalTokensUsed": 245600,
+      "inputTokens": 158900,
+      "outputTokens": 86700,
+      "estimatedCost": 0,
+      "lastUpdated": 1774095600000,
+      "timesUsed": 312
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "modelId": "anthropic/claude-sonnet-4-6",
+      "totalTokensUsed": 12450,
+      "inputTokens": 8200,
+      "outputTokens": 4250,
+      "estimatedCost": 67.35,
+      "lastUpdated": 1774095600000,
+      "timesUsed": 23
+    },
+    "anthropic/claude-haiku-4-5": {
+      "modelId": "anthropic/claude-haiku-4-5",
+      "totalTokensUsed": 5680,
+      "inputTokens": 3200,
+      "outputTokens": 2480,
+      "estimatedCost": 72.32,
+      "lastUpdated": 1774095600000,
+      "timesUsed": 12
+    }
+  },
+  "byDay": [
+    {
+      "date": "2026-03-20",
+      "usage": {
+        "ollama/qwen2.5:7b": 25000,
+        "ollama/deepseek-coder:6.7b": 35000,
+        "ollama/glm-4.7-flash": 120000,
+        "anthropic/claude-sonnet-4-6": 8000,
+        "anthropic/claude-haiku-4-5": 3500
+      }
+    },
+    {
+      "date": "2026-03-21",
+      "usage": {
+        "ollama/qwen2.5:7b": 20230,
+        "ollama/deepseek-coder:6.7b": 43950,
+        "ollama/glm-4.7-flash": 125600,
+        "anthropic/claude-sonnet-4-6": 4450,
+        "anthropic/claude-haiku-4-5": 2180
+      }
+    }
+  ]
+}

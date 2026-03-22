@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "title": "Mission Control Skills Database",
+    "version": "2.0",
+    "lastUpdated": "2026-03-21T23:30:00Z",
+    "totalCustomSkills": 7,
+    "totalSpecialists": 5,
+    "totalStandardSkills": 104,
+    "productionReady": 5,
+    "inDevelopment": 2
+  },
+  "customSkills": [
+    {
+      "id": "lossless-claw-openclaw",
+      "name": "Lossless Claw - OpenClaw",
+      "category": "Infrastructure",
+      "status": "production",
+      "statusLabel": "✅ Ready for Deployment",
+      "description": "Rate-limit resilient HTTP client for OpenClaw with 429 handling",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/lossless-claw-openclaw/"
+    },
+    {
+      "id": "model-status-report",
+      "name": "Model Status Report",
+      "category": "Monitoring & Diagnostics",
+      "status": "production",
+      "statusLabel": "✅ Ready",
+      "description": "Real-time model status dashboard with cost breakdown",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/model-status-report/"
+    },
+    {
+      "id": "openclaw-channel-router",
+      "name": "OpenClaw Channel Router",
+      "category": "System Integration",
+      "status": "production",
+      "statusLabel": "✅ Ready",
+      "description": "Route Discord messages to different models per channel",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/openclaw-channel-router/"
+    },
+    {
+      "id": "openclaw-error-monitor",
+      "name": "OpenClaw Error Monitor",
+      "category": "Infrastructure & Maintenance",
+      "status": "production",
+      "statusLabel": "✅ Ready",
+      "description": "Real-time error monitoring with automated nightly maintenance",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/openclaw-error-monitor/"
+    },
+    {
+      "id": "openclaw-mode-switcher",
+      "name": "OpenClaw Mode Switcher",
+      "category": "System Integration",
+      "status": "production",
+      "statusLabel": "✅ Ready",
+      "description": "Switch between Standard (local) and High (API+local) modes",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/openclaw-mode-switcher/"
+    },
+    {
+      "id": "claude-direct-call",
+      "name": "Claude Direct Call",
+      "category": "System Integration",
+      "status": "development",
+      "statusLabel": "⏳ Pending Implementation",
+      "description": "Direct Claude API access for urgent/high-quality tasks",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/claude-direct-call/"
+    },
+    {
+      "id": "specialist-delegation",
+      "name": "Specialist Delegation System",
+      "category": "Agent System",
+      "status": "development",
+      "statusLabel": "⏳ Pending Deployment",
+      "description": "Route tasks to specialist agents by type (coding, reasoning, writing, vision, long-context)",
+      "author": "XiaoZhu",
+      "location": ".agents/skills/specialist-delegation/",
+      "agents": ["xiaoya", "xiaohu", "xiaomao", "xiaoshe", "xiaozhu"]
+    }
+  ],
+  "specialists": [
+    {
+      "id": "xiaoya",
+      "name": "xiaoya",
+      "emoji": "🦆",
+      "role": "Coding Specialist",
+      "model": "ollama/deepseek-coder",
+      "provider": "Ollama",
+      "contextWindow": 32000,
+      "maxTokens": 16384,
+      "cost": "$0 (local)",
+      "specialties": [
+        "Code generation (Python, JS, TypeScript, Go, Rust, etc.)",
+        "Debugging and error analysis",
+        "Code review and refactoring",
+        "Git operations and version control",
+        "Technical architecture decisions"
+      ]
+    },
+    {
+      "id": "xiaohu",
+      "name": "xiaohu",
+      "emoji": "🐯",
+      "role": "Reasoning Specialist",
+      "model": "lmstudio/deepseek/deepseek-r1-0528-qwen3-8b",
+      "provider": "LM Studio",
+      "contextWindow": 32000,
+      "maxTokens": 24576,
+      "cost": "$0 (local)",
+      "specialties": [
+        "Complex problem analysis",
+        "Logical reasoning tasks",
+        "Research and investigation",
+        "Decision support and recommendations",
+        "Multi-step planning"
+      ]
+    },
+    {
+      "id": "xiaomao",
+      "name": "xiaomao",
+      "emoji": "🐱",
+      "role": "Writing Specialist",
+      "model": "lmstudio/qwen/qwen3-coder-30b",
+      "provider": "LM Studio",
+      "contextWindow": 32000,
+      "maxTokens": 24576,
+      "cost": "$0 (local)",
+      "specialties": [
+        "Document creation (reports, emails, proposals)",
+        "Content writing and editing",
+        "Technical documentation",
+        "Creative writing",
+        "Communication drafting"
+      ]
+    },
+    {
+      "id": "xiaoshe",
+      "name": "xiaoshe",
+      "emoji": "🐍",
+      "role": "Long Context Specialist",
+      "model": "ollama/glm-4.7-flash",
+      "provider": "Ollama",
+      "contextWindow": 128000,
+      "maxTokens": 32768,
+      "cost": "$0 (local)",
+      "specialties": [
+        "Long document analysis (100K+ tokens)",
+        "Full codebase context understanding",
+        "Comprehensive research across many files",
+        "Historical conversation analysis",
+        "Large dataset examination"
+      ]
+    },
+    {
+      "id": "xiaozhu",
+      "name": "xiaozhu",
+      "emoji": "🐖",
+      "role": "Vision Specialist",
+      "model": "lmstudio/qwen/qwen3-vl-30b",
+      "provider": "LM Studio",
+      "contextWindow": 32000,
+      "maxTokens": 24576,
+      "cost": "$0 (local)",
+      "capabilities": ["Vision", "Multimodal"],
+      "specialties": [
+        "Image analysis and description",
+        "Screenshot understanding",
+        "Diagram interpretation",
+        "Visual debugging (UI issues)",
+        "Chart and graph analysis"
+      ]
+    }
+  ],
+  "settings": {
+    "lastScan": "2026-03-21T23:30:00Z",
+    "autoUpdate": true,
+    "displayMode": "grid",
+    "sortBy": "status"
+  },
+  "skillSettings": {},
+  "agentSkillMap": {
+    "agent:main:main": [
+      "lossless-claw-openclaw",
+      "model-status-report",
+      "openclaw-channel-router",
+      "openclaw-error-monitor",
+      "openclaw-mode-switcher"
+    ]
+  },
+  "ratings": {
+    "lossless-claw-openclaw": 5,
+    "model-status-report": 5,
+    "openclaw-channel-router": 5,
+    "openclaw-error-monitor": 5,
+    "openclaw-mode-switcher": 5
+  },
+  "usageLog": [
+    {
+      "timestamp": "2026-03-21T23:30:00Z",
+      "action": "skills_page_updated",
+      "details": "Integrated custom skills database with 7 custom skills + 5 specialists + 104 standard skills"
+    }
+  ]
+}
