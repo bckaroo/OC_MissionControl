@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css';
 export const metadata = {
   title: 'Mission Control — Reports',
   description: 'Development notes, application history, and release documentation',
