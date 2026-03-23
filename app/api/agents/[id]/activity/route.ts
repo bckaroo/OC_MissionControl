@@ -44,7 +44,7 @@ interface SessionEntry {
   timestamp?: string;
   message?: {
     role: string;
-    content?: Array<{ type: string; text?: string; thinking?: string }>;
+    content?: string | Array<{ type: string; text?: string; thinking?: string }>;
   };
   toolCall?: {
     id: string;
@@ -57,7 +57,7 @@ interface SessionEntry {
  * Extract text content from a message's content array
  */
 function extractTextContent(
-  content: string | Array<{ type: string; text?: string; thinking?: string }>
+  content?: string | Array<{ type: string; text?: string; thinking?: string }>
 ): string {
   if (typeof content === "string") return content;
   if (Array.isArray(content)) {
