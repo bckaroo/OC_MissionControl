@@ -19,8 +19,9 @@ async function writeSkillData(data: any) {
 }
 
 // GET /api/skills/[id] — detailed skill info
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const id = decodeURIComponent(params.id);
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params;
+  const id = decodeURIComponent(rawId);
   const data = await readSkillData();
   const settings = data.skillSettings?.[id] || {};
   const rating = data.ratings?.[id] || null;
@@ -28,8 +29,9 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 }
 
 // PUT /api/skills/[id] — enable/disable, configure, rate
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
-  const id = decodeURIComponent(params.id);
+export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params;
+  const id = decodeURIComponent(rawId);
   const body = await req.json();
   const data = await readSkillData();
 
@@ -58,8 +60,9 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 }
 
 // POST /api/skills/[id]/uninstall  (handled separately, but placeholder)
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
-  const id = decodeURIComponent(params.id);
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params;
+  const id = decodeURIComponent(rawId);
   const data = await readSkillData();
   if (data.skillSettings) delete data.skillSettings[id];
   if (data.ratings) delete data.ratings[id];
